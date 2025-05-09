@@ -43,7 +43,7 @@ Login to: mqsql (server)
 
 >> dnf install nodejs -y
 
->> useradd --system --home /app --shell /sbin/nologin --comment "expense user" expense    ||||  Note : Add Application User
+>> useradd --system --home /app --shell /sbin/nologin --comment "expense user" expense    ||||  Note : Add Application User  ||||
 
 
 
