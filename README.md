@@ -1,7 +1,7 @@
 # 7.Project-Expense
 ====================
 
-Step 1: Create AWS Instances - mysql,back,front
+Step 1: Create AWS Instances - mysql (Instance)
 
 Login to: mqsql (server) 
 
@@ -28,6 +28,25 @@ Note : Goto mqsql (server)
 >> mysql -h mysql.devsecops-ai.site -u root -pExpenseApp@1
 
 >> mysql show database  >> mysql use mysql  >> mysql  show tables  >> mysql select * from user
+
+=======================================================================================================
+
+Step 2: Create AWS Instances - back (Instance)
+
+Login to: mqsql (server) 
+
+>> sudo su -
+
+>> dnf module disable nodejs -y
+
+>> dnf module enable nodejs:20 -y
+
+>> dnf install nodejs -y
+
+>> useradd --system --home /app --shell /sbin/nologin --comment "expense user" expense  || Note : Add Application User
+
+
+
 
 
 
