@@ -3,7 +3,7 @@
 
 Step 1: Create AWS Instances - mysql,back,front
 
-Login to: Server (mysql)
+Login to: mqsql (server) 
 
 >> sudo su -
 
@@ -19,7 +19,7 @@ Login to: Server (mysql)
 
 Note : Goto AWS Create Records at Route 53  >> Click DNS management  >> Select : site  >>  Click on Create record >> Record name : mysql  >> Value >> mysql public IP  >> TTL : 1  >> Click Create records
 
-Note : Goto mqsql server 
+Note : Goto mqsql (server) 
 
 >> nslookup mysql.devsecops-ai.site    
 
