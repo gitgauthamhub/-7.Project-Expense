@@ -67,15 +67,34 @@ Login to: mqsql (server)
 
 >> Note : goto (AWS) copy=>> mysql.devscops-ai.site  |||| goto (back-server) paste=>> it  atEnvironment=DB_HOST="mysql.devsecops-ai.site"  |||| save :wq!   |||| copy DB server = paste App server
 
->> 
+>> systemctl daemon-reload
 
+>> systemctl start backend
 
+>> systemctl enable backend
 
+>> systemctl status backend
 
+>> Note : Why its failed ??
 
+>> ls -l
 
+>> cd schema/
 
+>> ls -l
 
+>> cat backend.sql
 
+>> dnf install mysql -y
+
+>> mysql -h mysql.devsecops-ai.site -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
+>> systemctl restart backend
+
+>> systemctl status backend
+
+>> netstat -lntp
+
+>> telnet mysql.devsecops-ai.site 3306 
 
 
