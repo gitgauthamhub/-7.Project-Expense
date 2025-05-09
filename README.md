@@ -107,8 +107,62 @@ Login to:  (front-server)
 
 >> sudo su -
 
->> dnf install mysql-server -y 
+>> dnf install nginx -y 
 
->> systemctl enable mysqld
+>> systemctl enable nginx
 
->> systemctl start mysqld
+>> systemctl start nginx
+
+>> rm -rf /usr/share/nginx/html/*
+
+>> curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+
+>> cd /usr/share/nginx/html
+
+>> unzip /tmp/frontend.zip
+
+>> ls -l
+
+>> cd /etc/nginx/
+
+>> ls -l 
+
+>> cd default.d/
+
+>> vim expense.conf   |||| copy proxy_http_version 1.1; location /api/ { proxy_pass http://localhost:8080/; } location /health { stub_status on;  access_log off; }
+
+>> >> Note : goto (AWS) copy=>> mysql.devscops-ai.site  |||| goto (back-server) paste=>> it  atEnvironment=DB_HOST="mysql.devsecops-ai.site"  |||| save :wq!   |||| copy DB server = paste App server
+
+>> IMP : NOTE : Now goto (back-server) ,, copy (back IP) 
+
+>> IMP : NOTE : Now goto AWS ,, Route 53 ,, Sample record : back ,, Value : back IP ,, TTL : 1
+
+>> IMP : NOTE : Now goto front
+
+>> vim expense.conf
+
+>> proxy_http_version 1.1; location /api/ { proxy_pass http://localhost:8080/; } location /health { stub_status on;  access_log off;} orignial
+ 
+>> proxy_http_version 1.1; location /api/ { proxy_pass http://back.devsecops-ai.site:8080/; } location /health { stub_status on; access_log off; } updated 
+
+>> :wq !
+
+>> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
