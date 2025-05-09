@@ -45,6 +45,44 @@ Login to: mqsql (server)
 
 >> useradd --system --home /app --shell /sbin/nologin --comment "expense user" expense    ||||  Note : Add Application User  ||||
 
+>> id expense
+
+>> mkdir /app
+
+>> curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+
+>> cd /app
+
+>> unzip /tmp/backend.zip
+
+>> ls -l
+
+>> npm install
+
+>> ls -l
+
+>> vim /etc/systemd/system/backend.service
+
+>> [Unit]
+Description = Backend Service
+
+[Service]
+User=expense
+Environment=DB_HOST="<MYSQL-SERVER-IPADDRESS>"
+ExecStart=/bin/node /app/index.js
+SyslogIdentifier=backend
+
+[Install]
+WantedBy=multi-user.target
+
+>> 
+
+
+
+
+
+
+
 
 
 
