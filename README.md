@@ -25,4 +25,4 @@ Note : Goto mqsql (server)
 
 >> mysql_secure_installation --set-root-pass ExpenseApp@1
 
->> mysql> show database 
+>> mysql -h mysql.devsecops-ai.site -u root -pExpenseApp@1           ||  mysql -h <host-address> -u root -p<password>
