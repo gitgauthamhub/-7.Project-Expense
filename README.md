@@ -30,10 +30,11 @@ Note : Goto mqsql (server)
 >> mysql show database  >> mysql use mysql  >> mysql  show tables  >> mysql select * from user
 
 ===========================================================================================
+===========================================================================================
 
 Step 2: Create AWS Instances - back (Instance)
 
-Login to: mqsql (server) 
+Login to: (back-server) 
 
 >> sudo su -
 
@@ -98,3 +99,16 @@ Login to: mqsql (server)
 >> telnet mysql.devsecops-ai.site 3306 
 
 ===========================================================================================
+===========================================================================================
+
+Step 3: Create AWS Instances - front (Instance)
+
+Login to:  (front-server) 
+
+>> sudo su -
+
+>> dnf install mysql-server -y 
+
+>> systemctl enable mysqld
+
+>> systemctl start mysqld
