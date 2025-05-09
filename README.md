@@ -17,5 +17,7 @@ sudo su -
 
 # mysql_secure_installation --set-root-pass ExpenseApp@1
 
-Note : Goto AWS Create Records at Route 53  >> Click DNS management  >> Select : site  >>  Click on Create record 
+Note : Goto AWS Create Records at Route 53  >> Click DNS management  >> Select : site  >>  Click on Create record >> Record name : mysql  >> Value >> mysql public IP  >> TTL : 1  >> Click Create records
+
+
 
