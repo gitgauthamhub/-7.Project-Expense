@@ -19,7 +19,9 @@ sudo su -
 
 Note : Goto AWS Create Records at Route 53  >> Click DNS management  >> Select : site  >>  Click on Create record >> Record name : mysql  >> Value >> mysql public IP  >> TTL : 1  >> Click Create records
 
-Note : Goto mqsql server  >> nslookup mysql.devsecops-ai.site    
+Note : Goto mqsql server 
+
+>> nslookup mysql.devsecops-ai.site    
 
 >> mysql_secure_installation --set-root-pass ExpenseApp@1
 
