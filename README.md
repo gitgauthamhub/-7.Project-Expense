@@ -5,17 +5,17 @@ Step 1: Create AWS Instances - mysql,back,front
 
 Login to: Server (mysql)
 
-sudo su -
+>> sudo su -
 
-# dnf install mysql-server -y 
+>> dnf install mysql-server -y 
 
-# systemctl enable mysqld
+>> systemctl enable mysqld
 
-# systemctl start mysqld
+>> systemctl start mysqld
 
-# netstat -lntp
+>> netstat -lntp
 
-# mysql_secure_installation --set-root-pass ExpenseApp@1
+>> mysql_secure_installation --set-root-pass ExpenseApp@1
 
 Note : Goto AWS Create Records at Route 53  >> Click DNS management  >> Select : site  >>  Click on Create record >> Record name : mysql  >> Value >> mysql public IP  >> TTL : 1  >> Click Create records
 
