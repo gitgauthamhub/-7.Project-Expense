@@ -147,13 +147,15 @@ Login to:  (front-server)
 
 >> :wq !
 
->> 
+>> systemctl restart nginx
 
+>> IMP Note : Copy public IP (front-server)
 
+>> IMP Note : Goto AWS : Route 53 ,, Hosted zones ,, Select : Site & Update (front-server)
 
+>> Finally : Goto Browser ,, Copy Site & Enter
 
-
-
+LOOK THE OUTPUT
 
 
 
