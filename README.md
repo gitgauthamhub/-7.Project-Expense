@@ -65,7 +65,7 @@ Login to: mqsql (server)
 
 >> [Unit] Description = Backend Service [Service] User=expense Environment=DB_HOST="<MYSQL-SERVER-IPADDRESS>" ExecStart=/bin/node /app/index.js SyslogIdentifier=backend [Install] WantedBy=multi-user.target
 
->> Note : goto AWS -> copy mysql.devscops-ai.site  & goto back (server) paste it  atEnvironment=DB_HOST="mysql.devsecops-ai.site"   >> save :wq!
+>> Note : goto AWS &  copy=>> mysql.devscops-ai.site  |||| goto (back-server) paste=>> it  atEnvironment=DB_HOST="mysql.devsecops-ai.site"  |||| save :wq!
 
 >> 
 
